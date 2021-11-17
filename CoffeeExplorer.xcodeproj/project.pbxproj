@@ -94,9 +94,9 @@
 		22A9C2D527454F2000A08A3F /* CoffeeExplorer */ = {
 			isa = PBXGroup;
 			children = (
-				22A9C2D627454F2000A08A3F /* CoffeeExplorerApp.swift */,
-				22A9C2D827454F2000A08A3F /* ContentView.swift */,
-				22A9C2DA27454F2200A08A3F /* Assets.xcassets */,
+				22A9C300274551C400A08A3F /* App */,
+				22A9C301274551DB00A08A3F /* Feature */,
+				22BEDF6B2745536800BDF63D /* Resources */,
 				22A9C2DC27454F2200A08A3F /* Preview Content */,
 			);
 			path = CoffeeExplorer;
@@ -125,6 +125,38 @@
 				22A9C2F327454F2200A08A3F /* CoffeeExplorerUITestsLaunchTests.swift */,
 			);
 			path = CoffeeExplorerUITests;
+			sourceTree = "<group>";
+		};
+		22A9C300274551C400A08A3F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				22A9C2D627454F2000A08A3F /* CoffeeExplorerApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		22A9C301274551DB00A08A3F /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				22A9C302274551F200A08A3F /* Home */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		22A9C302274551F200A08A3F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				22A9C2D827454F2000A08A3F /* ContentView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		22BEDF6B2745536800BDF63D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				22A9C2DA27454F2200A08A3F /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
