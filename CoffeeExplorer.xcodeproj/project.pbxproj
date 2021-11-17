@@ -28,6 +28,9 @@
 		22BEDF9527457B3300BDF63D /* UserDefaultWrapperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BEDF9427457B3300BDF63D /* UserDefaultWrapperTest.swift */; };
 		22BEDF9727457EC700BDF63D /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BEDF9627457EC700BDF63D /* RootViewModel.swift */; };
 		22BEDF9B27457F0300BDF63D /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BEDF9A27457F0300BDF63D /* UserDefault.swift */; };
+		22BEDFA0274588A100BDF63D /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BEDF9F274588A100BDF63D /* LocationManager.swift */; };
+		22BEDFA22745989600BDF63D /* LocationFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BEDFA12745989600BDF63D /* LocationFetcher.swift */; };
+		22BEDFA52745994200BDF63D /* LocationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BEDFA42745994200BDF63D /* LocationManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,9 @@
 		22BEDF9427457B3300BDF63D /* UserDefaultWrapperTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultWrapperTest.swift; sourceTree = "<group>"; };
 		22BEDF9627457EC700BDF63D /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		22BEDF9A27457F0300BDF63D /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
+		22BEDF9F274588A100BDF63D /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		22BEDFA12745989600BDF63D /* LocationFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFetcher.swift; sourceTree = "<group>"; };
+		22BEDFA42745994200BDF63D /* LocationManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +151,7 @@
 		22A9C2E627454F2200A08A3F /* CoffeeExplorerTests */ = {
 			isa = PBXGroup;
 			children = (
+				22BEDFA32745992300BDF63D /* Location */,
 				22BEDF9327457AD700BDF63D /* UserDefault */,
 				22A9C2E727454F2200A08A3F /* CoffeeExplorerTests.swift */,
 			);
@@ -210,6 +217,7 @@
 		22BEDF73274554AB00BDF63D /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				22BEDF9E2745875B00BDF63D /* Location */,
 				22BEDF9927457EF800BDF63D /* UserDefaultWrapper */,
 				22BEDF8A274563C500BDF63D /* ButtonStyles */,
 				22BEDF872745632200BDF63D /* ColorPalette */,
@@ -290,6 +298,23 @@
 				22BEDF9A27457F0300BDF63D /* UserDefault.swift */,
 			);
 			path = UserDefaultWrapper;
+			sourceTree = "<group>";
+		};
+		22BEDF9E2745875B00BDF63D /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				22BEDF9F274588A100BDF63D /* LocationManager.swift */,
+				22BEDFA12745989600BDF63D /* LocationFetcher.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		22BEDFA32745992300BDF63D /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				22BEDFA42745994200BDF63D /* LocationManagerTests.swift */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,7 +455,9 @@
 			files = (
 				22BEDF9227456CAD00BDF63D /* RootView.swift in Sources */,
 				22BEDF8C274563F400BDF63D /* PrimaryButtonStyle.swift in Sources */,
+				22BEDFA22745989600BDF63D /* LocationFetcher.swift in Sources */,
 				22BEDF9B27457F0300BDF63D /* UserDefault.swift in Sources */,
+				22BEDFA0274588A100BDF63D /* LocationManager.swift in Sources */,
 				22A9C2D927454F2000A08A3F /* HomeView.swift in Sources */,
 				22BEDF8427455A9D00BDF63D /* OnBoardingView.swift in Sources */,
 				22A9C2D727454F2000A08A3F /* CoffeeExplorerApp.swift in Sources */,
@@ -445,6 +472,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22BEDFA52745994200BDF63D /* LocationManagerTests.swift in Sources */,
 				22BEDF9527457B3300BDF63D /* UserDefaultWrapperTest.swift in Sources */,
 				22A9C2E827454F2200A08A3F /* CoffeeExplorerTests.swift in Sources */,
 			);
@@ -615,6 +643,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CoffeeExplorer/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "CoffeeExplorer uses your location to help you find nearby places.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "CoffeeExplorer uses your location to help you find nearby places.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -646,6 +676,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CoffeeExplorer/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "CoffeeExplorer uses your location to help you find nearby places.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "CoffeeExplorer uses your location to help you find nearby places.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

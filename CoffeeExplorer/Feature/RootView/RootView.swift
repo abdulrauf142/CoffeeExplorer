@@ -13,6 +13,14 @@ struct RootView: View {
     let viewModel = RootViewModel()
     
     var body: some View {
+        rootView
+            .onAppear {
+                viewModel.hasSeenAppOnBoarding = true
+            }
+    }
+    
+    @ViewBuilder
+    var rootView: some View {
         switch viewModel.hasSeenAppOnBoarding {
         case true:
             HomeView()
