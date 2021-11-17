@@ -31,6 +31,15 @@
 		22BEDFA0274588A100BDF63D /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BEDF9F274588A100BDF63D /* LocationManager.swift */; };
 		22BEDFA22745989600BDF63D /* LocationFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BEDFA12745989600BDF63D /* LocationFetcher.swift */; };
 		22BEDFA52745994200BDF63D /* LocationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BEDFA42745994200BDF63D /* LocationManagerTests.swift */; };
+		22BEDFAA2745A5EA00BDF63D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BEDFA92745A5EA00BDF63D /* NetworkManager.swift */; };
+		22BEDFAD2745A60300BDF63D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BEDFAC2745A60300BDF63D /* Network.swift */; };
+		22BEDFAF2745A72700BDF63D /* RequestBuildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BEDFAE2745A72700BDF63D /* RequestBuildable.swift */; };
+		22BEDFB12745A74A00BDF63D /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BEDFB02745A74A00BDF63D /* ParameterEncoding.swift */; };
+		22BEDFB32745A75C00BDF63D /* URLEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BEDFB22745A75C00BDF63D /* URLEncoder.swift */; };
+		22BEDFB52745A76A00BDF63D /* JSONEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BEDFB42745A76A00BDF63D /* JSONEncoder.swift */; };
+		22BEDFB82745AAA800BDF63D /* URLEncoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BEDFB72745AAA800BDF63D /* URLEncoderTests.swift */; };
+		22BEDFBA2745AB5500BDF63D /* JSONEncoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BEDFB92745AB5500BDF63D /* JSONEncoderTests.swift */; };
+		22BEDFBC2745ABA600BDF63D /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BEDFBB2745ABA600BDF63D /* MockURLProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +89,15 @@
 		22BEDF9F274588A100BDF63D /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		22BEDFA12745989600BDF63D /* LocationFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFetcher.swift; sourceTree = "<group>"; };
 		22BEDFA42745994200BDF63D /* LocationManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerTests.swift; sourceTree = "<group>"; };
+		22BEDFA92745A5EA00BDF63D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		22BEDFAC2745A60300BDF63D /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		22BEDFAE2745A72700BDF63D /* RequestBuildable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuildable.swift; sourceTree = "<group>"; };
+		22BEDFB02745A74A00BDF63D /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		22BEDFB22745A75C00BDF63D /* URLEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEncoder.swift; sourceTree = "<group>"; };
+		22BEDFB42745A76A00BDF63D /* JSONEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONEncoder.swift; sourceTree = "<group>"; };
+		22BEDFB72745AAA800BDF63D /* URLEncoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEncoderTests.swift; sourceTree = "<group>"; };
+		22BEDFB92745AB5500BDF63D /* JSONEncoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONEncoderTests.swift; sourceTree = "<group>"; };
+		22BEDFBB2745ABA600BDF63D /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +169,7 @@
 		22A9C2E627454F2200A08A3F /* CoffeeExplorerTests */ = {
 			isa = PBXGroup;
 			children = (
+				22BEDFB62745AA9800BDF63D /* Network */,
 				22BEDFA32745992300BDF63D /* Location */,
 				22BEDF9327457AD700BDF63D /* UserDefault */,
 				22A9C2E727454F2200A08A3F /* CoffeeExplorerTests.swift */,
@@ -217,6 +236,7 @@
 		22BEDF73274554AB00BDF63D /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				22BEDFA62745A57000BDF63D /* Network */,
 				22BEDF9E2745875B00BDF63D /* Location */,
 				22BEDF9927457EF800BDF63D /* UserDefaultWrapper */,
 				22BEDF8A274563C500BDF63D /* ButtonStyles */,
@@ -315,6 +335,53 @@
 				22BEDFA42745994200BDF63D /* LocationManagerTests.swift */,
 			);
 			path = Location;
+			sourceTree = "<group>";
+		};
+		22BEDFA62745A57000BDF63D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				22BEDFA82745A59800BDF63D /* RequestBuildable */,
+				22BEDFA72745A58D00BDF63D /* Encoding */,
+				22BEDFA92745A5EA00BDF63D /* NetworkManager.swift */,
+				22BEDFAC2745A60300BDF63D /* Network.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		22BEDFA72745A58D00BDF63D /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				22BEDFB02745A74A00BDF63D /* ParameterEncoding.swift */,
+				22BEDFB22745A75C00BDF63D /* URLEncoder.swift */,
+				22BEDFB42745A76A00BDF63D /* JSONEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		22BEDFA82745A59800BDF63D /* RequestBuildable */ = {
+			isa = PBXGroup;
+			children = (
+				22BEDFAE2745A72700BDF63D /* RequestBuildable.swift */,
+			);
+			path = RequestBuildable;
+			sourceTree = "<group>";
+		};
+		22BEDFB62745AA9800BDF63D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				22BEDFBD2745ABBF00BDF63D /* Encoding */,
+				22BEDFBB2745ABA600BDF63D /* MockURLProtocol.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		22BEDFBD2745ABBF00BDF63D /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				22BEDFB72745AAA800BDF63D /* URLEncoderTests.swift */,
+				22BEDFB92745AB5500BDF63D /* JSONEncoderTests.swift */,
+			);
+			path = Encoding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -453,18 +520,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22BEDFB32745A75C00BDF63D /* URLEncoder.swift in Sources */,
 				22BEDF9227456CAD00BDF63D /* RootView.swift in Sources */,
 				22BEDF8C274563F400BDF63D /* PrimaryButtonStyle.swift in Sources */,
 				22BEDFA22745989600BDF63D /* LocationFetcher.swift in Sources */,
+				22BEDFB52745A76A00BDF63D /* JSONEncoder.swift in Sources */,
+				22BEDFAA2745A5EA00BDF63D /* NetworkManager.swift in Sources */,
 				22BEDF9B27457F0300BDF63D /* UserDefault.swift in Sources */,
 				22BEDFA0274588A100BDF63D /* LocationManager.swift in Sources */,
 				22A9C2D927454F2000A08A3F /* HomeView.swift in Sources */,
 				22BEDF8427455A9D00BDF63D /* OnBoardingView.swift in Sources */,
 				22A9C2D727454F2000A08A3F /* CoffeeExplorerApp.swift in Sources */,
 				22BEDF762745550B00BDF63D /* Font+Poppins.swift in Sources */,
+				22BEDFB12745A74A00BDF63D /* ParameterEncoding.swift in Sources */,
 				22BEDF81274556F500BDF63D /* String+Localization.swift in Sources */,
 				22BEDF9727457EC700BDF63D /* RootViewModel.swift in Sources */,
+				22BEDFAD2745A60300BDF63D /* Network.swift in Sources */,
 				22BEDF892745633000BDF63D /* ColorPalette.swift in Sources */,
+				22BEDFAF2745A72700BDF63D /* RequestBuildable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +547,9 @@
 			files = (
 				22BEDFA52745994200BDF63D /* LocationManagerTests.swift in Sources */,
 				22BEDF9527457B3300BDF63D /* UserDefaultWrapperTest.swift in Sources */,
+				22BEDFBA2745AB5500BDF63D /* JSONEncoderTests.swift in Sources */,
+				22BEDFBC2745ABA600BDF63D /* MockURLProtocol.swift in Sources */,
+				22BEDFB82745AAA800BDF63D /* URLEncoderTests.swift in Sources */,
 				22A9C2E827454F2200A08A3F /* CoffeeExplorerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

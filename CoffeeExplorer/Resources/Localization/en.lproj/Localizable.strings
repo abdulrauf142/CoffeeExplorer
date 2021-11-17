@@ -10,3 +10,12 @@
 "KEY_ONBOARD_LOCATION_PERMISSION_DESCRIPTION" = "We need to know where you are in order to scan nearby assistants";
 "KEY_ONBOARD_ALLOW" = "Allow";
 "KEY_ONBOARD_SKIP" = "Skip";
+
+/* Network Layer Error */
+"KEY_NETWORK_NIL_REQUEST" = "Failed to build the request, Please check your configuration.";
+"KEY_NETWORK_INVALID_URL" = "URL is not valid.";
+"KEY_NETWORK_PARAMETERS_NIL" = "Encoding can't be applied on nil parameters.";
+"KEY_NETWORK_PARAMETER_ENCODING_FAILED" = "Failed to encode the parameters.";
+"KEY_NETWORK_JSON_PARSING_FAILED" = "unable to parse to json.";
+"KEY_NETWORK_ERROR" = "Server not responding, Please try again later";
+"KEY_ERROR" = "Error!";
