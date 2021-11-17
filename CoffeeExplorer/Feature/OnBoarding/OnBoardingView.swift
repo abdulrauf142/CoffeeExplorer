@@ -1,5 +1,5 @@
 //
-//  OnBoardView.swift
+//  OnBoardingView.swift
 //  CoffeeExplorer
 //
 //  Created by ar on 17/11/2021.
