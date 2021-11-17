@@ -14,6 +14,12 @@
 		22A9C2E827454F2200A08A3F /* CoffeeExplorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A9C2E727454F2200A08A3F /* CoffeeExplorerTests.swift */; };
 		22A9C2F227454F2200A08A3F /* CoffeeExplorerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A9C2F127454F2200A08A3F /* CoffeeExplorerUITests.swift */; };
 		22A9C2F427454F2200A08A3F /* CoffeeExplorerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A9C2F327454F2200A08A3F /* CoffeeExplorerUITestsLaunchTests.swift */; };
+		22BEDF702745548C00BDF63D /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22BEDF6D2745548C00BDF63D /* Poppins-Bold.ttf */; };
+		22BEDF712745548C00BDF63D /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22BEDF6E2745548C00BDF63D /* Poppins-Regular.ttf */; };
+		22BEDF722745548C00BDF63D /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22BEDF6F2745548C00BDF63D /* Poppins-Medium.ttf */; };
+		22BEDF762745550B00BDF63D /* Font+Poppins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BEDF752745550B00BDF63D /* Font+Poppins.swift */; };
+		22BEDF7B2745567000BDF63D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22BEDF7D2745567000BDF63D /* Localizable.strings */; };
+		22BEDF81274556F500BDF63D /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BEDF80274556F500BDF63D /* String+Localization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,14 @@
 		22A9C2ED27454F2200A08A3F /* CoffeeExplorerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeExplorerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22A9C2F127454F2200A08A3F /* CoffeeExplorerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeExplorerUITests.swift; sourceTree = "<group>"; };
 		22A9C2F327454F2200A08A3F /* CoffeeExplorerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeExplorerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		22BEDF6D2745548C00BDF63D /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		22BEDF6E2745548C00BDF63D /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		22BEDF6F2745548C00BDF63D /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		22BEDF752745550B00BDF63D /* Font+Poppins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Poppins.swift"; sourceTree = "<group>"; };
+		22BEDF772745559E00BDF63D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		22BEDF7C2745567000BDF63D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		22BEDF7E2745567500BDF63D /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		22BEDF80274556F500BDF63D /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +110,9 @@
 			children = (
 				22A9C300274551C400A08A3F /* App */,
 				22A9C301274551DB00A08A3F /* Feature */,
+				22BEDF73274554AB00BDF63D /* Shared */,
 				22BEDF6B2745536800BDF63D /* Resources */,
+				22BEDF772745559E00BDF63D /* Info.plist */,
 				22A9C2DC27454F2200A08A3F /* Preview Content */,
 			);
 			path = CoffeeExplorer;
@@ -154,9 +170,46 @@
 		22BEDF6B2745536800BDF63D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				22BEDF782745564D00BDF63D /* Localization */,
+				22BEDF6C274553E300BDF63D /* Font */,
 				22A9C2DA27454F2200A08A3F /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		22BEDF6C274553E300BDF63D /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				22BEDF6D2745548C00BDF63D /* Poppins-Bold.ttf */,
+				22BEDF6F2745548C00BDF63D /* Poppins-Medium.ttf */,
+				22BEDF6E2745548C00BDF63D /* Poppins-Regular.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		22BEDF73274554AB00BDF63D /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				22BEDF74274554E700BDF63D /* Extension */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		22BEDF74274554E700BDF63D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				22BEDF752745550B00BDF63D /* Font+Poppins.swift */,
+				22BEDF80274556F500BDF63D /* String+Localization.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		22BEDF782745564D00BDF63D /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				22BEDF7D2745567000BDF63D /* Localizable.strings */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +298,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = 22A9C2CA27454F2000A08A3F;
 			productRefGroup = 22A9C2D427454F2000A08A3F /* Products */;
@@ -264,7 +318,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				22A9C2DE27454F2200A08A3F /* Preview Assets.xcassets in Resources */,
+				22BEDF7B2745567000BDF63D /* Localizable.strings in Resources */,
+				22BEDF702745548C00BDF63D /* Poppins-Bold.ttf in Resources */,
 				22A9C2DB27454F2200A08A3F /* Assets.xcassets in Resources */,
+				22BEDF712745548C00BDF63D /* Poppins-Regular.ttf in Resources */,
+				22BEDF722745548C00BDF63D /* Poppins-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +349,8 @@
 			files = (
 				22A9C2D927454F2000A08A3F /* ContentView.swift in Sources */,
 				22A9C2D727454F2000A08A3F /* CoffeeExplorerApp.swift in Sources */,
+				22BEDF762745550B00BDF63D /* Font+Poppins.swift in Sources */,
+				22BEDF81274556F500BDF63D /* String+Localization.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +385,18 @@
 			targetProxy = 22A9C2EE27454F2200A08A3F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		22BEDF7D2745567000BDF63D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22BEDF7C2745567000BDF63D /* en */,
+				22BEDF7E2745567500BDF63D /* ar */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		22A9C2F527454F2200A08A3F /* Debug */ = {
@@ -454,6 +526,7 @@
 				DEVELOPMENT_TEAM = NW9D933XVV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CoffeeExplorer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -484,6 +557,7 @@
 				DEVELOPMENT_TEAM = NW9D933XVV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CoffeeExplorer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

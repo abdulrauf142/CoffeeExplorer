@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  CoffeeExplorer
+
+  Created by ar on 17/11/2021.
+  
+*/
+
+"KEY_HELLO_WORLD" = "Hello, world!";

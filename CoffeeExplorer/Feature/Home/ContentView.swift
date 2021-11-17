@@ -9,7 +9,8 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        Text("Hello, world!")
+        Text("KEY_HELLO_WORLD".localized)
+            .font(.poppins(size: 18))
             .padding()
     }
 }
