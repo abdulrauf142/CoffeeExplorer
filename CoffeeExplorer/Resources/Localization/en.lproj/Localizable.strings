@@ -6,4 +6,7 @@
   
 */
 
-"KEY_HELLO_WORLD" = "Hello, world!";
+"KEY_ONBOARD_LOCATION_PERMISSION_TITLE" = "Allow your location";
+"KEY_ONBOARD_LOCATION_PERMISSION_DESCRIPTION" = "We need to know where you are in order to scan nearby assistants";
+"KEY_ONBOARD_ALLOW" = "Allow";
+"KEY_ONBOARD_SKIP" = "Skip";
