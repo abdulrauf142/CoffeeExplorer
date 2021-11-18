@@ -14,10 +14,10 @@ protocol Fetchable {
 
 struct NetworkManager: Fetchable {
     
-    // MARK:- Properties
+    // MARK: - Properties
     private let session: URLSession
     
-    // MARK:- Properties
+    // MARK: - Intializer
     init(with session: URLSession = URLSession.shared) {
         self.session = session
     }
@@ -48,17 +48,16 @@ struct NetworkManager: Fetchable {
     
     func validate(_ data: Data, _ response: URLResponse) throws -> Data {
         guard let httpResponse = response as? HTTPURLResponse else { throw NetworkError.badServerResponse }
-        guard (200..<300).contains(httpResponse.statusCode) else {
-            throw networkRequestError(data, httpResponse)
-        }
+        guard (200..<300).contains(httpResponse.statusCode) else { throw networkRequestError(data, httpResponse) }
         return data
     }
     
     func networkRequestError(_ data: Data, _ response: HTTPURLResponse) -> NSError {
-        guard let error = try? JSONDecoder().decode(Error.self, from: data) else {
+        guard let response = try? JSONDecoder().decode(Server.VenueListResponse.self, from: data) else {
             return NetworkError.badServerResponse as NSError
         }
-        return NSError(domain: "", code: response.statusCode, userInfo: [NSLocalizedDescriptionKey: error.message])
+        return NSError(domain: "", code: response.meta.code,
+                       userInfo: [NSLocalizedDescriptionKey: response.meta.errorDetail ?? ""])
       }
     
     struct Error: Decodable {

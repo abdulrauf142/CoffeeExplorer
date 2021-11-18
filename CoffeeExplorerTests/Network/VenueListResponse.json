@@ -1,0 +1,347 @@
+{
+    "meta": {
+        "code": 200,
+        "requestId": "61961426f44ce048e86ae861"
+    },
+    "response": {
+        "warning": {
+            "text": "There aren't a lot of results near you. Try something more general, reset your filters, or expand the search area."
+        },
+        "headerLocation": "Dubai",
+        "headerFullLocation": "Dubai",
+        "headerLocationGranularity": "city",
+        "query": "coffee",
+        "totalResults": 14,
+        "suggestedBounds": {
+            "ne": {
+                "lat": 25.31964009000009,
+                "lng": 55.436935093139915
+            },
+            "sw": {
+                "lat": 25.13963990999991,
+                "lng": 55.23832490686008
+            }
+        },
+        "groups": [
+            {
+                "type": "Recommended Places",
+                "name": "recommended",
+                "items": [
+                    {
+                        "reasons": {
+                            "count": 0,
+                            "items": [
+                                {
+                                    "summary": "This spot is popular",
+                                    "type": "general",
+                                    "reasonName": "globalInteractionReason"
+                                }
+                            ]
+                        },
+                        "venue": {
+                            "id": "4b6ecbd0f964a520f1ca2ce3",
+                            "name": "Khan Murjan (خان مرجان)",
+                            "contact": {
+                                "phone": "+97143279795",
+                                "formattedPhone": "+971 4 327 9795"
+                            },
+                            "location": {
+                                "address": "Wafi Mall",
+                                "lat": 25.229355249273247,
+                                "lng": 55.31933773949309,
+                                "labeledLatLngs": [
+                                    {
+                                        "label": "display",
+                                        "lat": 25.229355249273247,
+                                        "lng": 55.31933773949309
+                                    }
+                                ],
+                                "distance": 1842,
+                                "cc": "AE",
+                                "city": "دبي",
+                                "state": "دبي",
+                                "country": "الإمارات العربية المتحدة",
+                                "formattedAddress": [
+                                    "Wafi Mall",
+                                    "دبي",
+                                    "الإمارات العربية المتحدة"
+                                ]
+                            },
+                            "categories": [
+                                {
+                                    "id": "4bf58dd8d48988d115941735",
+                                    "name": "Middle Eastern Restaurant",
+                                    "pluralName": "Middle Eastern Restaurants",
+                                    "shortName": "Middle Eastern",
+                                    "icon": {
+                                        "prefix": "https://ss3.4sqi.net/img/categories_v2/food/middleeastern_",
+                                        "suffix": ".png"
+                                    },
+                                    "primary": true
+                                }
+                            ],
+                            "verified": false,
+                            "stats": {
+                                "tipCount": 116,
+                                "usersCount": 3177,
+                                "checkinsCount": 5271
+                            },
+                            "url": "http://www.wafi.com/view-shop?shopID=257",
+                            "price": {
+                                "tier": 2,
+                                "message": "Moderate",
+                                "currency": "$"
+                            },
+                            "rating": 8.6,
+                            "ratingColor": "73CF42",
+                            "ratingSignals": 552,
+                            "allowMenuUrlEdit": true,
+                            "beenHere": {
+                                "count": 0,
+                                "marked": false,
+                                "lastCheckinExpiredAt": 0
+                            },
+                            "hours": {
+                                "status": "Open until Midnight",
+                                "richStatus": {
+                                    "entities": [],
+                                    "text": "Open until Midnight"
+                                },
+                                "isOpen": true,
+                                "isLocalHoliday": false
+                            },
+                            "photos": {
+                                "count": 1,
+                                "groups": [
+                                    {
+                                        "type": "venue",
+                                        "name": "Venue photos",
+                                        "count": 1,
+                                        "items": [
+                                            {
+                                                "id": "4f7d7139e4b02c0a5a9b937b",
+                                                "createdAt": 1333621049,
+                                                "prefix": "https://fastly.4sqi.net/img/general/",
+                                                "suffix": "/y0-7DT9GIaDmzzEZqGk78h7nBixq8O3thT4q6RQOjkE.jpg",
+                                                "width": 431,
+                                                "height": 720,
+                                                "visibility": "public"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "hereNow": {
+                                "count": 0,
+                                "summary": "Nobody here",
+                                "groups": []
+                            },
+                            "popularityByGeo": 0.9793304487374814,
+                            "featuredPhotos": {
+                                "count": 1,
+                                "items": [
+                                    {
+                                        "id": "4f7d7139e4b02c0a5a9b937b",
+                                        "createdAt": 1333621049,
+                                        "prefix": "https://fastly.4sqi.net/img/general/",
+                                        "suffix": "/y0-7DT9GIaDmzzEZqGk78h7nBixq8O3thT4q6RQOjkE.jpg",
+                                        "width": 431,
+                                        "height": 720,
+                                        "visibility": "public"
+                                    }
+                                ]
+                            }
+                        },
+                        "tips": [
+                            {
+                                "id": "520cf37e11d275f35d3f8459",
+                                "createdAt": 1376580478,
+                                "text": "الجلسة لحالها جميله ♥ تحسسك باجواء لبنان .. الاكل بشكل عام جميل ، بس الكشري حكايه ثانية ♥",
+                                "type": "user",
+                                "canonicalUrl": "https://foursquare.com/item/520cf37e11d275f35d3f8459",
+                                "likes": {
+                                    "count": 36,
+                                    "groups": [],
+                                    "summary": "36 likes"
+                                },
+                                "logView": true,
+                                "agreeCount": 36,
+                                "disagreeCount": 0,
+                                "todo": {
+                                    "count": 2
+                                },
+                                "user": {
+                                    "firstName": "Alanoud",
+                                    "lastName": "?",
+                                    "address": "",
+                                    "city": "",
+                                    "state": "",
+                                    "countryCode": "SA"
+                                }
+                            }
+                        ],
+                        "referralId": "e-5-4b6ecbd0f964a520f1ca2ce3-0"
+                    },
+                    {
+                        "reasons": {
+                            "count": 0,
+                            "items": [
+                                {
+                                    "summary": "This spot is popular",
+                                    "type": "general",
+                                    "reasonName": "globalInteractionReason"
+                                }
+                            ]
+                        },
+                        "venue": {
+                            "id": "5bf2e49eb9b37b002c224d2a",
+                            "name": "Fujiya Japanese Restaurant",
+                            "contact": {
+                                "phone": "+97147028846",
+                                "formattedPhone": "+971 4 702 8846",
+                                "facebook": "687258488316409",
+                                "facebookUsername": "fujiya.dubai",
+                                "facebookName": "Fujiya - Dubai  富士屋　和食　居酒屋　ドバイ"
+                            },
+                            "location": {
+                                "address": "Millenium airport hotel",
+                                "crossStreet": "Casablanca street",
+                                "lat": 25.248875,
+                                "lng": 55.343855,
+                                "labeledLatLngs": [
+                                    {
+                                        "label": "display",
+                                        "lat": 25.248875,
+                                        "lng": 55.343855
+                                    }
+                                ],
+                                "distance": 2231,
+                                "cc": "AE",
+                                "city": "دبي",
+                                "state": "دبي",
+                                "country": "الإمارات العربية المتحدة",
+                                "formattedAddress": [
+                                    "Millenium airport hotel (Casablanca street)",
+                                    "دبي",
+                                    "الإمارات العربية المتحدة"
+                                ]
+                            },
+                            "categories": [
+                                {
+                                    "id": "4bf58dd8d48988d111941735",
+                                    "name": "Japanese Restaurant",
+                                    "pluralName": "Japanese Restaurants",
+                                    "shortName": "Japanese",
+                                    "icon": {
+                                        "prefix": "https://ss3.4sqi.net/img/categories_v2/food/japanese_",
+                                        "suffix": ".png"
+                                    },
+                                    "primary": true
+                                }
+                            ],
+                            "verified": false,
+                            "stats": {
+                                "tipCount": 8,
+                                "usersCount": 83,
+                                "checkinsCount": 128
+                            },
+                            "url": "https://www.millenniumhotels.com/en/dubai/millennium-airport-hotel-dubai/fujiya/",
+                            "price": {
+                                "tier": 2,
+                                "message": "Moderate",
+                                "currency": "$"
+                            },
+                            "rating": 8.2,
+                            "ratingColor": "73CF42",
+                            "ratingSignals": 20,
+                            "menu": {
+                                "type": "Menu",
+                                "label": "Menu",
+                                "anchor": "View Menu",
+                                "url": "https://media.millenniumhotels.com/mhb-media/3/1/9/3199FCD7-195A-49E1-B4E1-61C5C685A895/Millennium%20Airport%20Hotel%20Dubai%20Fujiya%20Food%20Menu.pdf?r=190103175834",
+                                "mobileUrl": "https://media.millenniumhotels.com/mhb-media/3/1/9/3199FCD7-195A-49E1-B4E1-61C5C685A895/Millennium%20Airport%20Hotel%20Dubai%20Fujiya%20Food%20Menu.pdf?r=190103175834",
+                                "externalUrl": "https://media.millenniumhotels.com/mhb-media/3/1/9/3199FCD7-195A-49E1-B4E1-61C5C685A895/Millennium%20Airport%20Hotel%20Dubai%20Fujiya%20Food%20Menu.pdf?r=190103175834"
+                            },
+                            "allowMenuUrlEdit": true,
+                            "beenHere": {
+                                "count": 0,
+                                "marked": false,
+                                "lastCheckinExpiredAt": 0
+                            },
+                            "hours": {
+                                "status": "Open until 2:00 AM",
+                                "richStatus": {
+                                    "entities": [],
+                                    "text": "Open until 2:00 AM"
+                                },
+                                "isOpen": true,
+                                "isLocalHoliday": false
+                            },
+                            "photos": {
+                                "count": 1,
+                                "groups": [
+                                    {
+                                        "type": "venue",
+                                        "name": "Venue photos",
+                                        "count": 1,
+                                        "items": [
+                                            {
+                                                "id": "5f5fadf22a9e7b291c0984f5",
+                                                "createdAt": 1600105970,
+                                                "prefix": "https://fastly.4sqi.net/img/general/",
+                                                "suffix": "/47857651_01qFeTL2m_mL_STjynUgrMiTNj1CuD5TCCOtv5VaZP4.jpg",
+                                                "width": 1440,
+                                                "height": 1920,
+                                                "visibility": "public"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "hereNow": {
+                                "count": 0,
+                                "summary": "Nobody here",
+                                "groups": []
+                            },
+                            "popularityByGeo": 0.9574928392955085,
+                            "featuredPhotos": {
+                                "count": 1,
+                                "items": [
+                                    {
+                                        "id": "5f5fadf22a9e7b291c0984f5",
+                                        "createdAt": 1600105970,
+                                        "prefix": "https://fastly.4sqi.net/img/general/",
+                                        "suffix": "/47857651_01qFeTL2m_mL_STjynUgrMiTNj1CuD5TCCOtv5VaZP4.jpg",
+                                        "width": 1440,
+                                        "height": 1920,
+                                        "visibility": "public"
+                                    }
+                                ]
+                            }
+                        },
+                        "tips": [
+                            {
+                                "id": "5c8f1e85b3c961002cf6e54c",
+                                "createdAt": 1552883333,
+                                "text": "Everything  we tried here was great but definitely go for the Shabu Shabu experience. Chef Akio knows how to make it super authentic. Highly recommend this place !",
+                                "type": "user",
+                                "canonicalUrl": "https://foursquare.com/item/5c8f1e85b3c961002cf6e54c",
+                                "logView": true,
+                                "agreeCount": 1,
+                                "disagreeCount": 0,
+                                "todo": {
+                                    "count": 0
+                                },
+                                "user": {
+                                    "firstName": "Naraniro",
+                                    "countryCode": "AE"
+                                }
+                            }
+                        ],
+                        "referralId": "e-5-5bf2e49eb9b37b002c224d2a-1"
+                    }
+                ]
+            }
+        ]
+    }
+}
