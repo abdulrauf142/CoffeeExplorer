@@ -83,25 +83,3 @@ struct VenueCardView: View {
         }
     }
 }
-
-
-struct VenueCardView_PreviewProvider: PreviewProvider {
-    static var previews: some View {
-        VenueCardView(venue: PreviewData.shared.venueList.first!)
-    }
-}
-
-
-class PreviewData {
-    
-    static let shared = PreviewData()
-    
-    let venueList: [Venue]
-    
-    private init() {
-        let data = json.data(using: .utf8)!
-        let decoder = JSONDecoder()
-        let response = try! decoder.decode(Server.VenueListResponse.self, from: data)
-        venueList = response.response.groups!.first!.items!.map { Venue(with: $0.venue) }
-    }
-}
