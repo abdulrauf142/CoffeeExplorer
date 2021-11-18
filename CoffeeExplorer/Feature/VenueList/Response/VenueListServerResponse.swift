@@ -208,7 +208,7 @@ extension Server {
     
     // MARK: - Location
     struct Location: Decodable {
-        let address: String
+        let address: String?
         let lat: Double
         let lng: Double
         let labeledLatLngs: [LabeledLatLng]?

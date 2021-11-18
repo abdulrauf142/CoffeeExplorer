@@ -11,6 +11,12 @@
 "KEY_ONBOARD_ALLOW" = "Allow";
 "KEY_ONBOARD_SKIP" = "Skip";
 
+"KEY_VENUE_LIST_TITLE" = "Venues";
+"KEY_VENUE_LIST_Loading" = "Loading ...";
+"KEY_VENUE_LIST_PLACEHOLDER_TITLE" = "Permission needed";
+"KEY_VENUE_LIST_PLACEHOLDER_DESCRIPTION" = "To serve you best user experince we need permissions from location.";
+
+
 /* Network Layer Error */
 "KEY_NETWORK_NIL_REQUEST" = "Failed to build the request, Please check your configuration.";
 "KEY_NETWORK_INVALID_URL" = "URL is not valid.";
@@ -19,3 +25,5 @@
 "KEY_NETWORK_JSON_PARSING_FAILED" = "unable to parse to json.";
 "KEY_NETWORK_ERROR" = "Server not responding, Please try again later";
 "KEY_ERROR" = "Error!";
+
+

@@ -6,7 +6,7 @@ target 'CoffeeExplorer' do
   use_frameworks!
 
   # Pods for CoffeeExplorer
-  
+  pod 'SDWebImageSwiftUI'
   
   target 'CoffeeExplorerTests' do
     inherit! :search_paths

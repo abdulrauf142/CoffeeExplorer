@@ -10,7 +10,7 @@ import CoreLocation
 
 struct VenueListQuery {
     let limit = 20
-    let radius = 1000
+    let radius = 10000
     let section = "coffee"
     let venuePhotosCount = 1
     

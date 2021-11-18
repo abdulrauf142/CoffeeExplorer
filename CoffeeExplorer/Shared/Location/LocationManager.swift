@@ -30,6 +30,7 @@ class LocationManager: NSObject, ObservableObject {
     
     func requestForAuthorization() {
         locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
     }
 }
 
@@ -53,6 +54,7 @@ extension LocationManager : LocationFetcherDelegate {
     func locationFetcher(_ fetcher: LocationFetcher, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
         coordinate = location.coordinate
+        locationManager.stopUpdatingLocation()
     }
     
     func locationFetcher(_ fetcher: LocationFetcher, didFailWithError error: Error) {

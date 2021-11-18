@@ -8,10 +8,28 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    // MARK: - Properties
+    @StateObject var locationManager = LocationManager()
+    
+    // MARK: - Views
     var body: some View {
-        Text("KEY_HELLO_WORLD".localized)
-            .font(.poppins(size: 18))
-            .padding()
+        rootView
+            .onAppear {
+                locationManager.requestForAuthorization()
+            }
+    }
+    
+    @ViewBuilder
+    var rootView: some View {
+        switch locationManager.status {
+        case .authorizedAlways, .authorizedWhenInUse:
+            if let coordinate = locationManager.coordinate {
+                VenueListView(coordinate: Coordinate(lat: coordinate.latitude, lng: coordinate.longitude))
+            }
+        default:
+            LocationPermissionPlaceholder()
+        }
     }
 }
 

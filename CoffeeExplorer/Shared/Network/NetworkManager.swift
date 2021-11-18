@@ -31,6 +31,7 @@ struct NetworkManager: Fetchable {
                 .tryMap { try self.validate($0.data, $0.response) }
                 .decode(type: T.self, decoder: JSONDecoder())
                 .mapError { error in
+                    print(error)
                     switch error {
                     case is Swift.DecodingError:
                         return .decodingFailed
