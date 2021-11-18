@@ -51,7 +51,7 @@ extension Server {
     // MARK: - PurpleItem
     struct PurpleItem: Decodable {
         let reasons: Reasons?
-        let venue: Venue?
+        let venue: Venue
         let tips: [Tip]?
         let referralID: String?
         
@@ -116,11 +116,11 @@ extension Server {
     
     // MARK: - Venue
     struct Venue: Decodable {
-        let id: String?
-        let name: String?
+        let id: String
+        let name: String
         let contact: Contact?
-        let location: Location?
-        let categories: [Category]?
+        let location: Location
+        let categories: [Category]
         let verified: Bool?
         let stats: Stats?
         let url: String?
@@ -186,15 +186,15 @@ extension Server {
     struct FeaturedPhotosItem: Decodable {
         let id: String?
         let createdAt: Int?
-        let itemPrefix: String?
+        let prefix: String?
         let suffix: String?
-        let width: String?
+        let width: Int?
         let height: Int?
         let visibility: String?
         
         enum CodingKeys: String, CodingKey {
             case id, createdAt
-            case itemPrefix = "prefix"
+            case prefix = "prefix"
             case suffix, width, height, visibility
         }
     }
@@ -202,15 +202,15 @@ extension Server {
     // MARK: - Hours
     struct Hours: Decodable {
         let status: String?
-        let isOpen: String?
+        let isOpen: Bool?
         let isLocalHoliday: Bool
     }
     
     // MARK: - Location
     struct Location: Decodable {
-        let address: String?
-        let lat: Double?
-        let lng: Double?
+        let address: String
+        let lat: Double
+        let lng: Double
         let labeledLatLngs: [LabeledLatLng]?
         let distance: Int?
         let cc: String?
@@ -274,14 +274,14 @@ extension Server {
     
     // MARK: - SuggestedBounds
     struct SuggestedBounds: Decodable {
-        let ne: Ne?
-        let sw: Ne?
+        let ne: Ne
+        let sw: Ne
     }
     
     // MARK: - Ne
     struct Ne: Decodable {
-        let lat: Double?
-        let lng: Double?
+        let lat: Double
+        let lng: Double
     }
     
     // MARK: - Warning
