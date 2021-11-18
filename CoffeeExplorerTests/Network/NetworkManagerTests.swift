@@ -16,7 +16,7 @@ class NetworkManagerTests: XCTestCase {
     
     override func setUpWithError() throws {
         try super.setUpWithError()
-        let query = VenueListQuery(corrrdinates: CLLocationCoordinate2D(latitude: 25.2048, longitude: 55.2708))
+        let query = VenueListQuery(offset: 0, coordinate: Coordinate(lat: 25.2048, lng: 55.2708))
         request = VenueListRequest(query: query)
         
         let config = URLSessionConfiguration.ephemeral

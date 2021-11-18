@@ -8,6 +8,8 @@
 import Foundation
 
 final class RootViewModel {
+    
+    // MARK: - Properties
     @UserDefault(key: "has.seen.app.OnBoarding", defaultValue: false)
     var hasSeenAppOnBoarding: Bool
 }

@@ -11,8 +11,9 @@ import CoreLocation
 struct VenueListQuery {
     let limit = 20
     let radius = 1000
-    let offset = 1
     let section = "coffee"
     let venuePhotosCount = 1
-    let corrrdinates: CLLocationCoordinate2D
+    
+    let offset: Int
+    let coordinate: Coordinate
 }

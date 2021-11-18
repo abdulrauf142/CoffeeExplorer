@@ -15,8 +15,8 @@ class VenueListRequestTests: XCTestCase {
     
     override func setUpWithError() throws {
         try super.setUpWithError()
-        let coordinate = CLLocationCoordinate2D(latitude: 25.2048, longitude: 55.2708)
-        request = VenueListRequest(query: VenueListQuery(corrrdinates: coordinate))
+        let coordinate = Coordinate(lat: 25.2048, lng: 55.2708)
+        request = VenueListRequest(query: VenueListQuery(offset: 0, coordinate: coordinate))
     }
     
     func testVenueExpolreEndpoint() {
@@ -39,5 +39,11 @@ class VenueListRequestTests: XCTestCase {
             print("error \(error.localizedDescription)")
         }
         wait(for: [throwExpection], timeout: 1.0)
+    }
+    
+    func testVenueExpolreParameter() {
+        XCTAssertEqual(request.parameters["limit"] as! Int, 20)
+        XCTAssertEqual(request.parameters["venuePhotos"] as! Int, 1)
+        XCTAssertEqual(request.parameters["ll"] as! String, "25.2048,55.2708")
     }
 }

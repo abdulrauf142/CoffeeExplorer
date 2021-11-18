@@ -19,7 +19,7 @@ struct VenueListRequest: RequestBuildable {
         ["radius": query.radius,
         "section": query.section,
          "offset" : "\(query.offset)",
-         "ll": "\(query.corrrdinates.latitude),\(query.corrrdinates.longitude)",
+         "ll": "\(query.coordinate.lat),\(query.coordinate.lng)",
          "v" : Network.fourSquareConfig.version,
          "limit" : query.limit,
          "venuePhotos": query.venuePhotosCount,
@@ -27,6 +27,7 @@ struct VenueListRequest: RequestBuildable {
          "client_secret": Network.fourSquareConfig.clientSecret]
     }
     
+    // MARK: - Initializer
     init(query: VenueListQuery) {
         self.query = query
     }

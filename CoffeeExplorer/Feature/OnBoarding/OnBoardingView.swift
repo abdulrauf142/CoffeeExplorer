@@ -9,6 +9,11 @@ import SwiftUI
 
 struct OnBoardingView: View {
     
+    // MARK: - Properties
+    @EnvironmentObject var appState: AppState
+    @StateObject var locationManager = LocationManager()
+    
+    // MARK: - View
     var body: some View {
         
         VStack(alignment: .center, spacing: 16.0)  {
@@ -28,7 +33,7 @@ struct OnBoardingView: View {
                     .fontWeight(.semibold)
                     .lineLimit(1)
                     .scaledToFit()
-                    
+                
                 Text("KEY_ONBOARD_LOCATION_PERMISSION_DESCRIPTION".localized)
                     .font(.poppins(size: 18))
                     .multilineTextAlignment(.center)
@@ -38,7 +43,7 @@ struct OnBoardingView: View {
                 VStack(spacing: 16) {
                     
                     Button(action: {
-                        // TODO: - Request for permission
+                        locationManager.requestForAuthorization()
                     }) {
                         Text("KEY_ONBOARD_ALLOW".localized)
                             .font(.poppins(size: 18))
@@ -49,7 +54,7 @@ struct OnBoardingView: View {
                     
                     
                     Button(action: {
-                        // TODO: - Navigate to home
+                        appState.hasSeenAppOnBoarding = true
                     }, label: {
                         Text("KEY_ONBOARD_SKIP".localized)
                             .font(.poppins(size: 18))
@@ -58,8 +63,11 @@ struct OnBoardingView: View {
                 }
             }
             .padding(.horizontal, 48)
-        
+            
             Spacer()
+        }
+        .onReceive(locationManager.$status) { status in
+            appState.hasSeenAppOnBoarding = status != nil && status != .notDetermined
         }
     }
 }
