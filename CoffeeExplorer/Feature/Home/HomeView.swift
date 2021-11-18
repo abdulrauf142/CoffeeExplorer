@@ -27,8 +27,10 @@ struct HomeView: View {
             if let coordinate = locationManager.coordinate {
                 VenueListView(coordinate: Coordinate(lat: coordinate.latitude, lng: coordinate.longitude))
             }
-        default:
+        case .denied, .restricted:
             LocationPermissionPlaceholder()
+        default:
+            Text(" ")
         }
     }
 }
