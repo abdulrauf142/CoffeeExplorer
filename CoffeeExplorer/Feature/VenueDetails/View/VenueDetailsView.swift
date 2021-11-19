@@ -18,64 +18,50 @@ struct VenueDetailsView: View {
     }
     
     var body: some View {
-        
-        NavigationView {
-            
-            ScrollView(.vertical, showsIndicators: false) {
-                
-                VenueImageHeaderView(imageURL: viewModel.photoURL)
-                    .frame(height: 400)
-                
-                VStack(alignment: .leading) {
+        LoadingView(isLoading: self.$viewModel.isLoading) {
+            NavigationView {
+                ScrollView(.vertical, showsIndicators: false) {
+                    
+                    VenueImageHeaderView(imageURL: viewModel.photoURL)
+                        .frame(height: 400)
                     
                     VStack(alignment: .leading) {
                         
-                        Text(viewModel.venueName)
-                            .font(.poppins(size: 26))
-                            .fontWeight(.semibold)
+                        VStack(alignment: .leading) {
+                            
+                            Text(viewModel.venueName)
+                                .font(.poppins(size: 26))
+                                .fontWeight(.semibold)
+                            
+                            Text(viewModel.venueDescription)
+                                .font(.poppins(size: 12))
+                                .multilineTextAlignment(.leading)
+                                .foregroundColor(.gray)
+                        }
+                        .padding(.horizontal)
                         
-                        Text(viewModel.venueDescription)
-                            .font(.poppins(size: 12))
-                            .multilineTextAlignment(.leading)
-                            .foregroundColor(.gray)
+                        Divider()
+                        SubtitleView(title: "KEY_VENUE_ADDRESS".localized, subTitle: viewModel.venueAddress)
+                            .padding(.horizontal)
+                        
+                        Divider()
+                        SubtitleView(title: "KEY_VENUE_HOURS".localized, subTitle: viewModel.venueOpenStatus)
+                            .padding(.horizontal)
+                        
+                        Divider()
+                        RecommendationView(recommendations: viewModel.recommendations)
+                            .padding(.top, 8)
+                            .padding(.horizontal)
                     }
-                    .padding(.horizontal)
-                    
-                    Divider()
-                    SubtitleView(title: "KEY_VENUE_ADDRESS".localized, subTitle: viewModel.venueAddress)
-                        .padding(.horizontal)
-                    
-                    Divider()
-                    SubtitleView(title: "KEY_VENUE_HOURS".localized, subTitle: viewModel.venueOpenStatus)
-                        .padding(.horizontal)
-                    
-                    Divider()
-                    RecommendationView(recommendations: viewModel.recommendations)
-                        .padding(.top, 8)
-                        .padding(.horizontal)
+                    .frame(maxWidth: .infinity)
                 }
-                .frame(maxWidth: .infinity)
+                .onAppear(perform: {
+                    viewModel.fetchVenueDetails()
+                })
+                .navigationTitle("")
+                .navigationBarHidden(true)
+                .edgesIgnoringSafeArea(.top)
             }
-            .onAppear(perform: {
-                viewModel.fetchVenueDetails()
-            })
-            .accentColor( .white)
-            .navigationTitle("")
-            .navigationBarHidden(true)
-            .edgesIgnoringSafeArea(.top)
-        }
-    }
-    
-    var subTitleView: some View {
-        
-        VStack(alignment: .leading) {
-            Text("KEY_VENUE_HOURS".uppercased())
-                .font(.poppins(size: 12))
-                .foregroundColor(.gray)
-            
-            Text(viewModel.venueOpenStatus)
-                .font(.poppins(size: 12))
-                .foregroundColor(.gray)
         }
     }
 }

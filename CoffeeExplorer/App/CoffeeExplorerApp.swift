@@ -11,11 +11,7 @@ import SwiftUI
 struct CoffeeExplorerApp: App {
     
     init() {
-        Network.fourSquareConfig = FoursquareConfig(
-            clientID: "4THX0X2VG2QU0VXWEZTUUA5HDRLD1MYDRXQZU5KAPT5CTVJF",
-            clientSecret: "RZVE20W4ZRQKLO3NQSUDJFZEV1LVJGZI0U4PDW2LXZBUGZU4",
-            version: "20193112"
-        )
+        setupFourSquareConfig()
     }
     
     var body: some Scene {
@@ -23,5 +19,13 @@ struct CoffeeExplorerApp: App {
             RootView()
                 .environmentObject(AppState())
         }
+    }
+    
+    func setupFourSquareConfig() {
+        Network.fourSquareConfig = FoursquareConfig(
+            clientID: "4THX0X2VG2QU0VXWEZTUUA5HDRLD1MYDRXQZU5KAPT5CTVJF",
+            clientSecret: "RZVE20W4ZRQKLO3NQSUDJFZEV1LVJGZI0U4PDW2LXZBUGZU4",
+            version: "20193112"
+        )
     }
 }

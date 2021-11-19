@@ -13,10 +13,12 @@ class VenueListViewModelTests: XCTestCase {
     
     private var cancellable: AnyCancellable?
     private var viewModel: VenueListViewModel!
+    private var repository: MockVenueListRepository!
     
     override func setUpWithError() throws {
         try super.setUpWithError()
-        viewModel = VenueListViewModel(with: VenueListUseCase(with: MockVenueListRepository()))
+        repository = MockVenueListRepository()
+        viewModel = VenueListViewModel(with: VenueListUseCase(with: repository))
     }
     
     func testFetchVenue() {
@@ -30,5 +32,19 @@ class VenueListViewModelTests: XCTestCase {
         }
         wait(for: [expectation], timeout: 5)
         XCTAssertTrue(viewModel.venues.count > 0)
+    }
+    
+    func testFetchVenueFailed() {
+        repository.isSuccess = false
+        let expectation = expectation(description: "test.failed.response.finished")
+        expectation.assertForOverFulfill = false
+        viewModel.fetchVenue(coordinate: Coordinate(lat: 1, lng: 2))
+        cancellable = viewModel.$showError.sink { success in
+            guard success == true else { return }
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 5)
+        XCTAssertTrue(viewModel.venues.count == 0)
+        XCTAssertEqual(viewModel.errorMessage, "KEY_NETWORK_JSON_PARSING_FAILED")
     }
 }

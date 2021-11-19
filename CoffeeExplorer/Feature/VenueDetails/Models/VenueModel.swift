@@ -19,8 +19,8 @@ struct VenueModel {
     init(venue: Server.VenueDetail) {
         
         name = venue.name ?? ""
-        
         address = venue.location?.address
+        
         if let locationAddress =  venue.location?.address {
             address = locationAddress + " - " + (venue.hierarchy?.first?.name ?? "")
         }
@@ -33,7 +33,6 @@ struct VenueModel {
 
             photoURL = URL(string: "\(prefix)\(width)x\(height)\(suffix)")
         }
-
 
         description = venue.description
         openStatus = venue.hours?.status
@@ -68,8 +67,6 @@ struct VenueModel {
     struct User {
         let firstName: String
         let lastName: String
-        
-        
         var fullName: String {
             firstName + " " + lastName
         }

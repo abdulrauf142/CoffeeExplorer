@@ -8,7 +8,7 @@
 import Combine
 import Foundation
 
-final class VenueDetailsViewModel: ObservableObject {
+final class VenueDetailsViewModel: BaseViewModel {
 
     // MARK: - properties
     @Published var venue: VenueModel?
@@ -35,17 +35,18 @@ final class VenueDetailsViewModel: ObservableObject {
     }
 
     func fetchVenueDetails() {
+        isLoading = true
         useCase.fetchVenue(by: trimmedVenue.id)
             .receive(on: DispatchQueue.main)
-            .sink { result in
-
+            .sink { [weak self] result in
+                guard let self = self else { return }
                 switch result {
-                case .finished:
-                    print("fetchCompleteVenue")
+                case .finished: break
                 case .failure(let error):
-                    print("Error \(error.localizedDescription)")
+                    self.errorSubject.send(error)
                 }
-
+                self.isLoading = false
+                
             } receiveValue: { [weak self] venueModel in
                 self?.venue = venueModel
             }
