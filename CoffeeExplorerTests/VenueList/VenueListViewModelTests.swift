@@ -32,6 +32,7 @@ class VenueListViewModelTests: XCTestCase {
         }
         wait(for: [expectation], timeout: 5)
         XCTAssertTrue(viewModel.venues.count > 0)
+        XCTAssertFalse(viewModel.hasMoreRows)
     }
     
     func testFetchVenueFailed() {

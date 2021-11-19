@@ -49,7 +49,6 @@ class VenueDetailsUseCaseTests: XCTestCase {
                 case .finished:
                     break
                 }
-                
                 expectation.fulfill()
                 cancellable?.cancel()
             } receiveValue: { value in

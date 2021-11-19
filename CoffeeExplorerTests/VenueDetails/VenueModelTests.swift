@@ -43,6 +43,8 @@ class VenueModelTests: XCTestCase {
         
         waitForExpectations(timeout: 0.5)
         XCTAssertNil(error)
+        XCTAssertEqual(model!.recommendations.first!.date, "Aug 15 2013")
+        XCTAssertEqual(model!.recommendations.first!.user.fullName, "Alanoud ?")
         XCTAssertEqual(model!.photoURL, URL(string: "https://fastly.4sqi.net/img/general/431x720/y0-7DT9GIaDmzzEZqGk78h7nBixq8O3thT4q6RQOjkE.jpg")!)
         XCTAssertEqual(model!.name, "Khan Murjan (خان مرجان)")
         XCTAssertEqual(model!.description, "At the heart of the souk is an exquisite marble courtyard, offering an oasis of cool serenity, yet open to the sky. The Umawi architecture provides an ornate backdrop to the social core of the souk, where people can gather and dine,")
