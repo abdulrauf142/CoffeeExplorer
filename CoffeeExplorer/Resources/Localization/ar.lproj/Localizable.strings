@@ -11,6 +11,15 @@
 "KEY_ONBOARD_ALLOW" = "Allow";
 "KEY_ONBOARD_SKIP" = "Skip";
 
+"KEY_VENUE_LIST_TITLE" = "Venues";
+"KEY_VENUE_LIST_Loading" = "Loading ...";
+"KEY_VENUE_LIST_PLACEHOLDER_TITLE" = "Permission needed";
+"KEY_VENUE_LIST_PLACEHOLDER_DESCRIPTION" = "To serve you best user experince we need permissions from location.";
+
+"KEY_VENUE_ADDRESS" = "ADDRESS";
+"KEY_VENUE_HOURS" = "HOURS";
+"KEY_VENUE_RECOMMENDATIONS" = "Recommendations";
+
 /* Network Layer Error */
 "KEY_NETWORK_NIL_REQUEST" = "Failed to build the request, Please check your configuration.";
 "KEY_NETWORK_INVALID_URL" = "URL is not valid.";

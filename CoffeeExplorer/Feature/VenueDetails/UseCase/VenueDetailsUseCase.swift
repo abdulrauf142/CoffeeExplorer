@@ -18,7 +18,11 @@ struct VenueDetailsUseCase {
 }
 
 extension VenueDetailsUseCase {
-    func fetchVenue(by id: String) -> AnyPublisher<Server.VenueDetailsResponse, NetworkError> {
+    func fetchVenue(by id: String) -> AnyPublisher<VenueModel, NetworkError> {
         repository.fetchVenue(by: id)
+            .map { response in
+                VenueModel(venue: response.response.venue)
+            }
+            .eraseToAnyPublisher()
     }
 }

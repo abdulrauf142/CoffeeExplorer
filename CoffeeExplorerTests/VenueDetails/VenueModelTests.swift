@@ -1,5 +1,5 @@
 //
-//  VenueDetailUseCaseTests.swift
+//  VenueModelTests.swift
 //  CoffeeExplorerTests
 //
 //  Created by ar on 19/11/2021.
@@ -9,21 +9,7 @@ import XCTest
 import Combine
 @testable import CoffeeExplorer
 
-class MockVenueDetailsRepository: VenueDetailsRepositoryProtocol {
-    func fetchVenue(by id: String) -> AnyPublisher<Server.VenueDetailsResponse, NetworkError> {
-        return Future <Server.VenueDetailsResponse, NetworkError> { promise in
-            promise(.success(self.venueDetailsResponse))
-        }.eraseToAnyPublisher()
-    }
-}
-
-extension MockVenueDetailsRepository {
-    var venueDetailsResponse: Server.VenueDetailsResponse {
-        try! JSONDecoder().decode(Server.VenueDetailsResponse.self, from: File.venueDetailsReponse.data!)
-    }
-}
-
-class VenueDetailsUseCaseTests: XCTestCase {
+class VenueModelTests: XCTestCase {
     
     private var repository: MockVenueDetailsRepository!
     private var useCase: VenueDetailsUseCase!
@@ -34,8 +20,7 @@ class VenueDetailsUseCaseTests: XCTestCase {
         useCase = VenueDetailsUseCase(with: repository)
     }
     
-    func testFetchVenuesWhenSuccess() {
-        
+    func testVenueModelMapping() {
         var model: VenueModel?
         var error: NetworkError?
         var cancellable: AnyCancellable?
@@ -58,7 +43,9 @@ class VenueDetailsUseCaseTests: XCTestCase {
         
         waitForExpectations(timeout: 0.5)
         XCTAssertNil(error)
-        XCTAssertNotNil(model)
+        XCTAssertEqual(model!.photoURL, URL(string: "https://fastly.4sqi.net/img/general/431x720/y0-7DT9GIaDmzzEZqGk78h7nBixq8O3thT4q6RQOjkE.jpg")!)
+        XCTAssertEqual(model!.name, "Khan Murjan (خان مرجان)")
+        XCTAssertEqual(model!.description, "At the heart of the souk is an exquisite marble courtyard, offering an oasis of cool serenity, yet open to the sky. The Umawi architecture provides an ornate backdrop to the social core of the souk, where people can gather and dine,")
+        XCTAssertTrue(model!.recommendations.count > 0)
     }
 }
-

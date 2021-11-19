@@ -21,7 +21,7 @@ struct VenueListView: View {
             List {
                 
                 ForEach(viewModel.venues, id: \.id) { venue in
-                    NavigationLink(destination: Text("")) {
+                    NavigationLink(destination: VenueDetailsView(venue: venue)) {
                         VenueCardView(venue: venue)
                     }
                     .padding()
@@ -38,7 +38,9 @@ struct VenueListView: View {
                     }
                     .padding()
                     .onAppear {
-                        viewModel.fetchVenue(coordinate: coordinate)
+                        if viewModel.venues.isEmpty {
+                            viewModel.fetchVenue(coordinate: coordinate)
+                        }
                     }
                     .modifier(PrimaryCardViewStyle(radius: 8))
                     
