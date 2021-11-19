@@ -13,7 +13,7 @@ struct VenueListUseCase {
     // MARK: - Properties
     private let repository: VenueListRepositoryProtocol
     
-    // MARK: - Initializer
+    // MARK: - initializer
     init(with repository: VenueListRepositoryProtocol = VenueListRepository()) {
         self.repository = repository
     }

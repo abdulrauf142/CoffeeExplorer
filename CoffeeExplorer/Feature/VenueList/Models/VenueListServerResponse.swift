@@ -37,7 +37,6 @@ extension Server {
         let headerLocationGranularity: String?
         let query: String?
         let totalResults: Int?
-        let suggestedBounds: SuggestedBounds?
         let groups: [ResponseGroup]?
     }
     
@@ -118,37 +117,14 @@ extension Server {
     struct Venue: Decodable {
         let id: String
         let name: String
-        let contact: Contact?
         let location: Location
         let categories: [Category]
         let verified: Bool?
-        let stats: Stats?
-        let url: String?
-        let price: Price?
         let rating: Double?
-        let ratingColor: String?
-        let ratingSignals: Int?
-        let allowMenuURLEdit: Bool?
-        let beenHere: BeenHere?
         let hours: Hours?
         let photos: Photos?
-        let hereNow: HereNow?
         let popularityByGeo: Double?
-        let featuredPhotos: FeaturedPhotos?
-        let menu: Menu?
         
-        enum CodingKeys: String, CodingKey {
-            case id, name, contact, location, categories, verified, stats, url, price, rating, ratingColor, ratingSignals
-            case allowMenuURLEdit = "allowMenuUrlEdit"
-            case beenHere, hours, photos, hereNow, popularityByGeo, featuredPhotos, menu
-        }
-    }
-    
-    // MARK: - BeenHere
-    struct BeenHere: Decodable {
-        let count: Int?
-        let marked: Bool?
-        let lastCheckinExpiredAt: Int?
     }
     
     // MARK: - Category
@@ -167,21 +143,6 @@ extension Server {
         let suffix: String
     }
     
-    // MARK: - Contact
-    struct Contact: Decodable {
-        let phone: String?
-        let formattedPhone: String?
-        let facebook: String?
-        let facebookUsername: String?
-        let facebookName: String?
-    }
-    
-    // MARK: - FeaturedPhotos
-    struct FeaturedPhotos: Decodable {
-        let count: Int?
-        let items: [FeaturedPhotosItem]?
-    }
-    
     // MARK: - FeaturedPhotosItem
     struct FeaturedPhotosItem: Decodable {
         let id: String?
@@ -191,12 +152,6 @@ extension Server {
         let width: Int?
         let height: Int?
         let visibility: String?
-        
-        enum CodingKeys: String, CodingKey {
-            case id, createdAt
-            case prefix = "prefix"
-            case suffix, width, height, visibility
-        }
     }
     
     // MARK: - Hours
@@ -228,22 +183,6 @@ extension Server {
         let lng: Double?
     }
     
-    // MARK: - Menu
-    struct Menu: Decodable {
-        let type: String?
-        let label: String?
-        let anchor: String?
-        let url: String?
-        let mobileURL: String?
-        let externalURL: String?
-        
-        enum CodingKeys: String, CodingKey {
-            case type, label, anchor, url
-            case mobileURL = "mobileUrl"
-            case externalURL = "externalUrl"
-        }
-    }
-    
     // MARK: - Photos
     struct Photos: Decodable {
         let count: Int?
@@ -256,32 +195,6 @@ extension Server {
         let name: String?
         let count: Int?
         let items: [FeaturedPhotosItem]?
-    }
-    
-    // MARK: - Price
-    struct Price: Decodable {
-        let tier: Int?
-        let message: String?
-        let currency: String?
-    }
-    
-    // MARK: - Stats
-    struct Stats: Decodable {
-        let tipCount: Int?
-        let usersCount: Int?
-        let checkinsCount: Int?
-    }
-    
-    // MARK: - SuggestedBounds
-    struct SuggestedBounds: Decodable {
-        let ne: Ne
-        let sw: Ne
-    }
-    
-    // MARK: - Ne
-    struct Ne: Decodable {
-        let lat: Double
-        let lng: Double
     }
     
     // MARK: - Warning

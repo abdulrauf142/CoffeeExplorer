@@ -23,7 +23,7 @@ final class VenueListViewModel: ObservableObject {
     var hasMoreRows: Bool {
         pageOffset < totalResult
     }
-    // MARK: - Initializer
+    // MARK: - initializer
     init(with useCase: VenueListUseCase = VenueListUseCase()) {
         self.useCase = useCase
     }

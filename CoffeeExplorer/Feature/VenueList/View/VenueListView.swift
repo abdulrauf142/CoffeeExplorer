@@ -21,7 +21,7 @@ struct VenueListView: View {
             List {
                 
                 ForEach(viewModel.venues, id: \.id) { venue in
-                    NavigationLink(destination: VenueDetailsView(venue: venue)) {
+                    NavigationLink(destination: Text("")) {
                         VenueCardView(venue: venue)
                     }
                     .padding()
@@ -58,12 +58,5 @@ struct VenueListView: View {
 struct VenueListView_PreviewProvider: PreviewProvider {
     static var previews: some View {
         VenueListView(coordinate: Coordinate(lat: 1, lng: 2))
-    }
-}
-
-struct VenueDetailsView: View {
-    let venue: Venue
-    var body: some View {
-        Text("Id")
     }
 }

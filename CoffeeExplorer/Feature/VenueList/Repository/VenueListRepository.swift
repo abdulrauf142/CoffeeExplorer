@@ -17,7 +17,7 @@ struct VenueListRepository {
     // MARK: - Properties
     private let network: Fetchable
     
-    // MARK: - Intializers
+    // MARK: - initializers
     init(with network: Fetchable = NetworkManager()) {
         self.network = network
     }

@@ -27,7 +27,7 @@ struct VenueListRequest: RequestBuildable {
          "client_secret": Network.fourSquareConfig.clientSecret]
     }
     
-    // MARK: - Initializer
+    // MARK: - initializer
     init(query: VenueListQuery) {
         self.query = query
     }

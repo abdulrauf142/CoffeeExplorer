@@ -27,7 +27,7 @@ struct Venue: Identifiable {
     let coordinates: Coordinate
     var thumbnail: URL?
     
-    
+    // MARK: - initializer
     init(with venue: Server.Venue) {
         
         id = venue.id

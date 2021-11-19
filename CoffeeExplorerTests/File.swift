@@ -11,6 +11,7 @@ enum File: String {
     
     case venueListResponse = "VenueListResponse"
     case failedVenueListResponse = "FailedVenueListResponse"
+    case venueDetailsReponse = "VenueDetailsView"
     
     var data: Data? {
         let bundle = Bundle(for: NetworkManagerTests.self)
